@@ -50,7 +50,7 @@ p {
 }
 
 .section-title span {
-    color: black;
+    color: greenyellow;
 }
 
 .cta {
@@ -75,7 +75,7 @@ p {
 .brand h1 {
     font-size: 3rem;
     text-transform: uppercase;
-    color: black;
+    color: greenyellow;
 }
 
 .brand h1 span {
@@ -307,7 +307,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, greenyellow 0%, black 100%);
+    background-image: linear-gradient(60deg, black 0%, black 100%);
     opacity: 0.9;
     z-index: -1;
 }
