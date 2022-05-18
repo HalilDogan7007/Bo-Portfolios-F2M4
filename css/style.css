@@ -247,7 +247,7 @@ p {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: indianred;
+    background-color: black;
     animation: text_reveal_box 1s ease;
     animation-delay: 0.5s;
 }
@@ -261,6 +261,53 @@ p {
 }
 
 #Text h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+
+#Text h2 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+#Text h2:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#Text h2:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#Text h2:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 3s;
+}
+
+#Text h2 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: greenyellow;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+}
+
+#Text h2:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+#Text h2:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#Text h2:nth-child(3) span {
     animation-delay: 2.5s;
 }
 
@@ -462,13 +509,11 @@ p {
 }
 
 #projects .project-img:after {
-    content: '';
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: 0.7;
 }
 
@@ -663,10 +708,10 @@ p {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
     .cta {
         font-size: 2.5rem;
-        padding: 20px 60px;
+        padding: 1.25rem 3.75rem;
     }
     h1.section-title {
         font-size: 6rem;
@@ -690,7 +735,7 @@ p {
         flex-direction: row-reverse;
     }
     #projects .project-item {
-        height: 400px;
+        height: 25rem;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -705,27 +750,27 @@ p {
         flex-direction: row;
     }
     #about .col-left {
-        width: 600px;
-        height: 400px;
-        padding-left: 60px;
+        width: 37.5rem;
+        height: 25rem;
+        padding-left: 3.75rem;
     }
     #about .about .col-left .about-img::after {
-        left: -45px;
-        top: 34px;
+        left: -2.8125rem;
+        top: 2.125rem;
         height: 98%;
         width: 98%;
-        border: 10px solid blue;
+        border: 0.625rem solid blue;
     }
     #about .col-right {
         text-align: left;
-        padding: 30px;
+        padding: 1.875rem;
     }
     #about .col-right h1 {
         text-align: left;
     }
     #contact .contact {
         flex-direction: column;
-        padding: 100px 0;
+        padding: 6.25rem 0;
         align-items: center;
         justify-content: center;
         min-width: 20vh;
@@ -743,8 +788,8 @@ p {
         flex-direction: row;
     }
     #contact .contact-item .icon {
-        height: 100px;
-        width: 100px;
+        height: 6.25rem;
+        width: 6.25rem;
     }
     #contact .contact-item .icon img {
         object-fit: contain;
@@ -756,7 +801,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75rem) {
     #header .hamburger {
         display: none;
     }
