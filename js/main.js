@@ -1,7 +1,7 @@
-const hamburger = document.querySelector('.Text .nav-bar .nav-list .hamburger');
-const mobile_menu = document.querySelector('.Text .nav-bar .nav-list ul');
-const menu_item = document.querySelectorAll('.Text .nav-bar .nav-list ul li a');
-const header = document.querySelector('.Text.container');
+const hamburger = document.querySelector('.header .navbar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .navbar .nav-list ul');
+const menu_item = document.querySelectorAll('.herader .navbar .nav-list ul li a');
+const header = document.querySelector('.header.container');
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
@@ -23,3 +23,12 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+function myFunction() {
+	var x = document.getElementById("myLinks");
+	if (x.style.display === "block") {
+	  x.style.display = "none";
+	} else {
+	  x.style.display = "block";
+	}
+  }
