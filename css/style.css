@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 9px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
@@ -21,6 +21,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 img {
@@ -39,14 +40,13 @@ p {
 }
 
 .section-title {
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-weight: bold;
-    text-align: center;
+	font-size     : 4rem;
+	font-weight   : 300;
+	color         : black;
+	margin-bottom : 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align    : center;
 }
 
 .section-title span {
@@ -82,114 +82,154 @@ p {
     color: greenyellow;
 }
 
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 2.1875rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
+/* Header section */
+#header {
+	position: fixed;
+	z-index : 1000;
+	left    : 0;
+	top     : 0;
+	width   : 100vw;
+	height  : auto;
 }
 
-.logo{
+#header .header {
+	min-height      : 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition      : 0.3s ease background-color;
+}
+
+#header .nav-bar {
+	display        : flex;
+	align-items    : center;
+	justify-content: space-between;
+	width          : 100%;
+	height         : 100%;
+	max-width      : 1300px;
+	padding        : 0 10px;
+}
+
+#header .nav-list ul {
+	list-style      : none;
+	position        : absolute;
+	background-color: rgb(31, 30, 30);
+	width           : 100vw;
+	height          : 100vh;
+	left            : 100%;
+	top             : 0;
+	display         : flex;
+	flex-direction  : column;
+	justify-content : center;
+	align-items     : center;
+	z-index         : 1;
+	overflow-x      : hidden;
+	transition      : 0.5s ease left;
+}
+
+#header .nav-list ul.active {
+	left: 0%;
+}
+
+#header .nav-list ul a {
+	font-size      : 2rem;
+	font-weight    : 500;
+	letter-spacing : 0.2rem;
+	text-decoration: none;
+	color          : white;
+	text-transform : uppercase;
+	padding        : 20px;
+	display        : block;
+}
+
+#header .nav-list ul a::after {
+	content       : attr(data-after);
+	position      : absolute;
+	top           : 50%;
+	left          : 50%;
+	transform     : translate(-50%, -50%) scale(0);
+	color         : rgba(240, 248, 255, 0.021);
+	font-size     : 13rem;
+	letter-spacing: 50px;
+	z-index       : -1;
+	transition    : 0.3s ease letter-spacing;
+}
+
+#header .nav-list ul li:hover a::after {
+	transform     : translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
+
+#header .hamburger {
+	height         : 60px;
+	width          : 60px;
+	display        : inline-block;
+	border         : 3px solid white;
+	border-radius  : 50%;
+	position       : relative;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	z-index        : 100;
+	cursor         : pointer;
+	transform      : scale(0.8);
+	margin-right   : 20px;
+}
+
+#header .hamburger:after {
+	position     : absolute;
+	content      : '';
+	height       : 100%;
+	width        : 100%;
+	border-radius: 50%;
+	border       : 3px solid white;
+	animation    : hamburger_puls 1s ease infinite;
+}
+
+#header .hamburger .bar {
+	height          : 2px;
+	width           : 30px;
+	position        : relative;
+	background-color: white;
+	z-index         : -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content            : '';
+	position           : absolute;
+	height             : 100%;
+	width              : 100%;
+	left               : 0;
+	background-color   : white;
+	transition         : 0.3s ease;
+	transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after {
+	top: 8px;
+}
+
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+
+.logo {
     width: 7.5rem;
     cursor: pointer;
     width: 17rem;
 }
 
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 1.25rem;
-    position: relative;
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0%;
-    background: greenyellow;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after{
-    width: 100%;
-}
-
-
-
-
-#header .hamburger {
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    border: 3px solid white;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    cursor: pointer;
-    transform: scale(0.8);
-    margin-right: 20px;
-}
-
-#header .hamburger:after {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid white;
-    animation: hamburger_puls 1s ease infinite;
-}
-
-#header .hamburger .bar {
-    height: 2px;
-    width: 30px;
-    position: relative;
-    background-color: white;
-    z-index: -1;
-}
-
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: white;
-    transition: 0.3s ease;
-    transition-property: top, bottom;
-}
-
-#header .hamburger .bar::after {
-    top: 8px;
-}
-
-#header .hamburger .bar::before {
-    bottom: 8px;
-}
-
-#header .hamburger.active .bar::before {
-    bottom: 0;
-}
-
-#header .hamburger.active .bar::after {
-    top: 0;
-}
 
 #Text {
     background-image: url(/img/zakelijke.png);
@@ -867,8 +907,8 @@ p {
     background-color: #fff;
     padding: 30px 30px 30px 30px;
     padding-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    border: 8px solid #ced4da;
+    border-radius: 0.5rem;
     max-width: 100%;   
 }
 
