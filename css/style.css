@@ -67,6 +67,12 @@ p {
     transition-property: background-color, color;
 }
 
+.google{
+    height: 30rem;
+    width: 130rem;
+
+}
+
 .cta:hover {
     color: black;
     background-color: yellowgreen;
@@ -159,7 +165,7 @@ p {
 }
 
 #header .nav-list ul li:hover a {
-	color: crimson;
+	color: greenyellow;
 }
 
 #header .hamburger {
@@ -839,6 +845,14 @@ p {
         text-align: left;
         padding-left: 20px;
     }
+    .formulier{
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        display: flex;
+
+    }
 }
 
 @media only screen and (min-width: 75rem) {
@@ -866,6 +880,10 @@ p {
         margin: 1.5%;
     }
     #services2 .service-bottom2 .kopjes {
+        flex-basis: 22%;
+        margin: 1.5%;
+    }
+    .formulier{
         flex-basis: 22%;
         margin: 1.5%;
     }
