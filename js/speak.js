@@ -57,8 +57,8 @@ actionSpeech = (speechText) => {
       image1.style.width = "400px";
       image1.classList.remove("hide") // show image
       break;
-    case "volgende": 
-      window.open("https://designhd.nl/", "_self");
+    case "github": 
+      window.open("https://github.com/HalilDogan7007", "_self");
       break;
     case "link":
         window.open("https://www.linkedin.com/in/halil-dogan-9016b91a4/");
@@ -66,7 +66,26 @@ actionSpeech = (speechText) => {
     case "help me":
       alert("Valid speech commands: black,  reset, next page");
       break;
-    default:
+      case "over mij": 
+      window.open("https://designhd.nl/#services", "_self");
+      break;
+        case "projecten": 
+        window.open("https://designhd.nl/#projects", "_self");
+        break;
+          case "web": 
+          window.open("https://designhd.nl/#about", "_self");
+          break;
+            case "github": 
+            window.open("https://designhd.nl/#formulier2", "_self");
+            break;
+              case "over mij": 
+              window.open("https://designhd.nl/#contact", "_self");
+              break;
+              case "volgende": 
+              window.open("https://designhd.nl/index-engels.html", "_self");
+              break;
+              default:
+
       // do nothing yet
   }
 }
