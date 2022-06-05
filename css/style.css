@@ -844,14 +844,7 @@ p {
         text-align: left;
         padding-left: 20px;
     }
-    .formulier{
-        height: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 0;
-        display: flex;
 
-    }
 }
 
 @media only screen and (min-width: 75rem) {
@@ -913,8 +906,6 @@ p {
 
 .formulier {
     margin: 0;
-    margin-left: 275px;
-    margin-right: 275px;
     font-family: -apple-system, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -960,6 +951,8 @@ p {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+
 
 .fcf-form-control:focus {
     border: 1px solid #313131;
