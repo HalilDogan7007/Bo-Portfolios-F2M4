@@ -1,7 +1,7 @@
 <?php
 $config = [
     'server' => 'localhost',
-    'database' => 'portfolio',
+    'database' => 'projecten',
     'username' => 'root',
     'password' => '',
     'port' => 3306

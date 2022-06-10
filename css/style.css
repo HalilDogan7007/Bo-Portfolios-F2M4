@@ -758,6 +758,10 @@ p {
         font-size: 2.5rem;
         padding: 1.25rem 3.75rem;
     }
+    .tekst1 {
+        font-size: 2.5rem;
+        padding: 1.25rem 3.75rem;
+    }
     h1.section-title {
         font-size: 6rem;
     }
@@ -1063,4 +1067,19 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     width: 100%;
 }
 
+
+.tekst1{
+    border: 2px solid chartreuse;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
 

@@ -1,3 +1,14 @@
+<?php
+require 'function.php';
+$connection = dbConnect();
+
+$result = $connection->query('SELECT * FROM `opdrachten`');
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -51,7 +62,7 @@
                         <li><a href="#about" data-after="Contact">Github</a></li>
                         <li><a href="#formulier2" data-after="Contact">Form</a></li>
                         <li><a href="#contact" data-after="Contact">Contact</a></li>
-                        <li><a href="index.html" data-after="Contact">Netherlands</a></li>
+                        <li><a href="index.html" data-after="Contact">Nederlands</a></li>
                     </ul>
                 </div>
         </div>
@@ -67,7 +78,7 @@
                     <h2>Welcome to <span></span></h2>
                     <h1>Halil Web-Developer <span></span></h1>
                     <a href="#projects" type="button" class="cta">Portfolio</a>
-                    <button onclick="startRecognition()">Speech to text</button>
+                    <button class="tekst1" onclick="startRecognition()">Speech to text</button>
                     <div id="result" class="hide"></div>
                     <div><img id="image1" class="hide"></div>
                 </div>
