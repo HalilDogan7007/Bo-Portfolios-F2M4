@@ -1081,5 +1081,6 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     letter-spacing: 0.1rem;
     transition: 0.3s ease;
     transition-property: background-color, color;
+
 }
 

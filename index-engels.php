@@ -48,7 +48,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
             <nav class="nav-bar">
 
                 <div class="brand">
-                    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+                    <a href="index-engels.php"><img src="img/logo.png" alt="logo" class="logo"></a>
                 </div>
                 <div class="nav-list">
                     <div class="hamburger">
@@ -62,7 +62,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                         <li><a href="#about" data-after="Contact">Github</a></li>
                         <li><a href="#formulier2" data-after="Contact">Form</a></li>
                         <li><a href="#contact" data-after="Contact">Contact</a></li>
-                        <li><a href="index.html" data-after="Contact">Nederlands</a></li>
+                        <li><a href="index.php" data-after="Contact">Nederlands</a></li>
                     </ul>
                 </div>
         </div>

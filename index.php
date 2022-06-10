@@ -52,7 +52,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
             <nav class="nav-bar">
 
                 <div class="brand">
-                    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+                    <a href="index.php"><img src="img/logo.png" alt="logo" class="logo"></a>
                 </div>
                 <div class="nav-list">
                     <div class="hamburger">
@@ -148,7 +148,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                                 </p>
                             </div>
                             <div class="project-img">
-                                <a href="https://33289.hosts1.ma-cloud.nl/header/"> <img src="img/<?php echo $row['foto']; ?>" alt="Img van mijn project van periode 2 over museum scheepvaart."></a>
+                                <a href=""> <img src="img/<?php echo $row['foto']; ?>" alt="Img van mijn project van periode 2 over museum scheepvaart."></a>
                             </div>
                         
                         </div>
