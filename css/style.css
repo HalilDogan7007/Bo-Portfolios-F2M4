@@ -620,7 +620,7 @@ p {
     top: 19px;
     height: 98%;
     width: 98%;
-    border: 7px solid blue;
+    border: 7px solid greenyellow;
     z-index: -1;
 }
 
@@ -808,7 +808,7 @@ p {
         top: 2.125rem;
         height: 98%;
         width: 98%;
-        border: 0.625rem solid blue;
+        border: 0.625rem solid greenyellow;
     }
     #about .col-right {
         text-align: left;
@@ -909,6 +909,9 @@ p {
 }
 
 .formulier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     font-family: -apple-system, Arial, sans-serif;
     font-size: 1rem;
@@ -921,7 +924,7 @@ p {
     padding-bottom: 10px;
     border: 8px solid #ced4da;
     border-radius: 0.5rem;
-    max-width: 100%;   
+    max-width: 70%;   
 }
 
 .Formulier3{
