@@ -28,13 +28,24 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
     <script src="js/speak.js" defer></script>
     <script src="js/analystic.js" defer></script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGXPMMB');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KGXPMMB');
+    </script>
+    <!-- End Google Tag Manager -->
 
 
 </head>
@@ -132,7 +143,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="projects-header">
                     <h2 class="section-title">Recente <span>Projecten</span></h2>
                 </div>
-                    <div class="all-projects">
+                <div class="all-projects">
                     <?php foreach ($result as $row) : ?>
                         <div class="project-item">
                             <div class="project-info">
@@ -143,11 +154,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="project-img">
                                 <a href="https://33289.hosts1.ma-cloud.nl/header/"> <img src="img/<?php echo $row['foto']; ?>" alt="Img van mijn project van periode 2 over museum scheepvaart."></a>
                             </div>
-                        
-                        </div>
-                        <?php endforeach; ?>
 
-                    </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                </div>
             </div>
 
         </section>
@@ -158,8 +169,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h2 class="section-title"><span>Web</span> Services</h2>
                     <p></p>
                 </div>
+                <div class="filters">
+                    <div>
+                        <input id="checkbox-all" type="checkbox" class="filter" />
+                        <label for="checkbox-all" class="label">All</label>
+                    </div>
+                    <div>
+                        <input id="checkbox-website" type="checkbox" class="filter" />
+                        <label for="checkbox-website" class="label">Website</label>
+                    </div>
+                    <div>
+                        <input id="checkbox-app" type="checkbox" class="filter" />
+                        <label for="checkbox-app" class="label">App</label>
+                    </div>
+                    <div>
+                        <input id="checkbox-design" type="checkbox" class="filter" />
+                        <label for="checkbox-design" class="label">Design</label>
+                    </div>
+                </div>
+
+
+
                 <div class="service-bottom2">
-                    <div class="kopjes">
+                    <div class="kopjes" data-category="website">>
                         <div class="icon"><img src="https://img.icons8.com/stickers/100/000000/domain.png" alt="Icoontje met www op van een website" />
                         </div>
                         <h2>website</h2>
@@ -167,7 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             op dit moment studeer ik nog. Voor meer Informatie contacteer mij voor uw
                             Keuze.</p>
                     </div>
-                    <div class="kopjes">
+                    <div class="kopjes" data-category="app">
                         <div class="icon"><img src="https://img.icons8.com/dusk/100/000000/apple-app-store--v1.png" alt="Icoontje met de app store logo" /></div>
                         <h2>App</h2>
                         <p>Ik maak ook een app voor klanten die bijvoorbeeld de aantal gewerkte uren wilt kunnen tonen
@@ -176,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             opties.
                         </p>
                     </div>
-                    <div class="kopjes">
+                    <div class="kopjes" data-category="design">
                         <div class="icon"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/100/000000/external-design-engineering-flaticons-flat-circular-flat-icons.png" alt="Icoontje met design verbindingen" /></div>
                         <h2>Design</h2>
                         <p>Ik ontwerp ook volgens u keuze en ideeen logo's en ben heel erg goed in het denk tot een
