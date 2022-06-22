@@ -17,9 +17,10 @@ for(let i = 0; i < filters.length; i++){
 let rpgfilter = document.getElementById("checkbox-website");
 
 rpgfilter.onchange = function(){
-    if(rpgfilter.checked === true){
+    console.log("checked");
+    if(rpgfilter.checked !== true){
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "website"){
+            if(allgames[i].dataset.category !== "website"){
                 allgames[i].style.display = "block";
             }
 
@@ -27,7 +28,7 @@ rpgfilter.onchange = function(){
     }
     else{
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "website"){
+            if(allgames[i].dataset.category !== "website"){
                 allgames[i].style.display = "none";
             }
 
@@ -41,9 +42,9 @@ rpgfilter.onchange = function(){
 let actionfilter = document.getElementById("checkbox-app")
 
 actionfilter.onchange = function(){
-    if(actionfilter.checked === true){
+    if(actionfilter.checked !== true){
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "app"){
+            if(allgames[i].dataset.category !== "app"){
                 allgames[i].style.display = "block";
             }
 
@@ -52,7 +53,7 @@ actionfilter.onchange = function(){
     }
     else{
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "app"){
+            if(allgames[i].dataset.category !== "app"){
                 allgames[i].style.display = "none";
             }
 
@@ -66,9 +67,9 @@ actionfilter.onchange = function(){
 let adventurefilter = document.getElementById("checkbox-design");
 
 adventurefilter.onchange = function(){
-    if(adventurefilter.checked === true){
+    if(adventurefilter.checked !== true){
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "design"){
+            if(allgames[i].dataset.category !== "design"){
                 allgames[i].style.display = "block";
             }
 
@@ -76,7 +77,7 @@ adventurefilter.onchange = function(){
     }
     else{
         for(let i = 0; i < allgames.length; i++){
-            if(allgames[i].dataset.category === "design"){
+            if(allgames[i].dataset.category !== "design"){
                 allgames[i].style.display = "none";
             }
 

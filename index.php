@@ -27,6 +27,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
     <script src=".vscode/settings.json" defer></script>
     <script src="js/speak.js" defer></script>
     <script src="js/analystic.js" defer></script>
+    <script src="js/filter.js" defer></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -149,11 +150,14 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                             <div class="project-info">
                                 <h2><?php echo $row['titel']; ?></h2>
                                 <p><?php echo $row['beschrijving']; ?>
+                                    <a class="button" href="details.php?id=<?php echo $row['id']; ?>">Meer Info</a>
                                 </p>
                             </div>
                             <div class="project-img">
-                                <a href="https://33289.hosts1.ma-cloud.nl/header/"> <img src="img/<?php echo $row['foto']; ?>" alt="Img van mijn project van periode 2 over museum scheepvaart."></a>
+                                <a href="<?php echo $row['link']; ?>" target="_blank"> <img src="img/<?php echo $row['foto']; ?>" alt="Img van mijn project van periode 2 over museum scheepvaart."></a>
                             </div>
+
+
 
                         </div>
                     <?php endforeach; ?>
@@ -171,19 +175,15 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                 </div>
                 <div class="filters">
                     <div>
-                        <input id="checkbox-all" type="checkbox" class="filter" />
-                        <label for="checkbox-all" class="label">All</label>
-                    </div>
-                    <div>
-                        <input id="checkbox-website" type="checkbox" class="filter" />
+                        <input checked id="checkbox-website" type="checkbox" class="filter" />
                         <label for="checkbox-website" class="label">Website</label>
                     </div>
                     <div>
-                        <input id="checkbox-app" type="checkbox" class="filter" />
+                        <input checked id="checkbox-app" type="checkbox" class="filter" />
                         <label for="checkbox-app" class="label">App</label>
                     </div>
                     <div>
-                        <input id="checkbox-design" type="checkbox" class="filter" />
+                        <input checked id="checkbox-design" type="checkbox" class="filter" />
                         <label for="checkbox-design" class="label">Design</label>
                     </div>
                 </div>
@@ -191,7 +191,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
 
 
                 <div class="service-bottom2">
-                    <div class="kopjes" data-category="website">>
+                    <div class="box kopjes" data-category="website">>
                         <div class="icon"><img src="https://img.icons8.com/stickers/100/000000/domain.png" alt="Icoontje met www op van een website" />
                         </div>
                         <h2>website</h2>
@@ -199,7 +199,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                             op dit moment studeer ik nog. Voor meer Informatie contacteer mij voor uw
                             Keuze.</p>
                     </div>
-                    <div class="kopjes" data-category="app">
+                    <div class="box kopjes" data-category="app">
                         <div class="icon"><img src="https://img.icons8.com/dusk/100/000000/apple-app-store--v1.png" alt="Icoontje met de app store logo" /></div>
                         <h2>App</h2>
                         <p>Ik maak ook een app voor klanten die bijvoorbeeld de aantal gewerkte uren wilt kunnen tonen
@@ -208,7 +208,7 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                             opties.
                         </p>
                     </div>
-                    <div class="kopjes" data-category="design">
+                    <div class="box kopjes" data-category="design">
                         <div class="icon"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/100/000000/external-design-engineering-flaticons-flat-circular-flat-icons.png" alt="Icoontje met design verbindingen" /></div>
                         <h2>Design</h2>
                         <p>Ik ontwerp ook volgens u keuze en ideeen logo's en ben heel erg goed in het denk tot een

@@ -29,13 +29,14 @@ $place = $statement->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="container">
-        <h1 class="header"><?php echo $place['titel']?></h1>
+<body class="container place-details">
+    <div class="place-info">
+        <h1 class="headertype"><?php echo $place['titel']?></h1>
         <figure><img src="img/<?php echo $place['foto']?>" alt="" width="700px" height="500px"></figure>
         <p class="p"><?php echo $place['beschrijving']?></p>
+        <a href="contact.php" class="link-button">Neem contact op!</a>
 
         
 
