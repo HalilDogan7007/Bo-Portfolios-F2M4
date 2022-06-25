@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'function2.php';
 $connection = dbConnect();
 
 if( !isset($_GET['id']) ){
@@ -14,7 +14,7 @@ if($check_int == false){
     exit;
 }
 
-$statement = $connection->prepare('SELECT * FROM `opdrachten` WHERE id=?');
+$statement = $connection->prepare('SELECT * FROM `opdrachtenen` WHERE id=?');
 $params = [$id];
 $statement->execute($params);
 $place = $statement->fetch(PDO::FETCH_ASSOC);
@@ -34,11 +34,11 @@ $place = $statement->fetch(PDO::FETCH_ASSOC);
 </head>
 <body class="container place-details">
     <div class="place-info">
-        <h1 class="headertype"><?php echo $place['titel']?></h1>
-        <figure><img src="img/<?php echo $place['foto']?>" alt="" width="700px" height="500px"></figure>
-        <p class="p"><?php echo $place['beschrijving']?></p>
-        <a href="contact.php" class="link-button">Neem contact op!</a>
-        <a href="index.php" class="link-button">Terug</a>
+        <h1 class="headertype"><?php echo $place['title']?></h1>
+        <figure><img src="img/<?php echo $place['picture']?>" alt="" width="700px" height="500px"></figure>
+        <p class="p"><?php echo $place['message']?></p>
+        <a href="contact2.php" class="link-button">Contact us!</a>
+        <a href="index-engels.php" class="link-button">Back</a>
 
         
 

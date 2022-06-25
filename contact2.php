@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'function2.php';
 $connection = dbConnect();
 
 $voornaam = '';
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="container">
-        <h1 class="contact_h1">neem contact op!</h1>
+        <h1 class="contact_h1">Contact us!</h1>
 
         <section class="contact_head">
 
@@ -77,10 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h2> have a question?</h2>
             </header>
 
-            <form action="contact.php" method="POST" novalidate>
+            <form action="contact2.php" method="POST" novalidate>
                 <div class="contact_form1">
-                    <label for="voornaam">voornaam</label>
-                    <input type="text" value="<?php echo $voornaam; ?>" id="voornaam" name="voornaam" placeholder="Vul uw voornaam in" required>
+                    <label for="voornaam">First Name</label>
+                    <input type="text" value="<?php echo $voornaam; ?>" id="voornaam" name="voornaam" placeholder="Enter your first Name" required>
 
                     <?php if (!empty($errors['voornaam'])) : ?>
                         <p class="form_error"><?php echo $errors['voornaam'] ?></p>
@@ -88,26 +88,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 </div>
                 <div class="contact_form2">
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" value="<?php echo $achternaam; ?>" id="achternaam" name="achternaam" placeholder="Vul uw achternaam in" required>
+                    <label for="achternaam">Last Name</label>
+                    <input type="text" value="<?php echo $achternaam; ?>" id="achternaam" name="achternaam" placeholder="Enter your Last Name" required>
                     <?php if (!empty($errors['achternaam'])) : ?>
                         <p class="form_error"><?php echo $errors['achternaam'] ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="contact_form3">
                     <label for="email">E-mail</label>
-                    <input type="email" value="<?php echo $email; ?>" id="email" name="email" placeholder="Vul uw e-mailadres in" required>
+                    <input type="email" value="<?php echo $email; ?>" id="email" name="email" placeholder="Enter your e-mailadres" required>
                     <?php if (!empty($errors['email'])) : ?>
                         <p class="form_error"><?php echo $errors['email'] ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="contact_form4">
-                    <label for="bericht">Bericht</label>
-                    <textarea id="bericht" name="bericht" placeholder="Vul uw vraag of bericht in" required><?php echo $bericht; ?></textarea>
+                    <label for="bericht">Message</label>
+                    <textarea id="bericht" name="bericht" placeholder="Enter your message" required><?php echo $bericht; ?></textarea>
                     <?php if (!empty($errors['bericht'])) : ?>
                         <p class="form_error"><?php echo $errors['bericht'] ?></p>
                     <?php endif; ?>
-                    <button type="submit" class="contact_button">Opsturen</button>
+                    <button type="submit" class="contact_button">Send</button>
                 </div>
 
 

@@ -12,12 +12,12 @@ startRecognition = () => {
     recognition.continuous = false; 
    
     recognition.onstart = () => {
-      message.innerHTML = `Starting listening, speak in the microphone please<br>Say "help me" for help`;
+      message.innerPHP = `Starting listening, speak in the microphone please<br>Say "help me" for help`;
       output.classList.add("hide"); 
     };
 
     recognition.onspeechend = () => {
-      message.innerHTML = `I stopped listening `;
+      message.innerPHP = `I stopped listening `;
       recognition.stop();
     };
 

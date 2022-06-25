@@ -21,6 +21,10 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Halil Dogan">
     <meta name="discription" content="Web-development">
+    <meta name="description" content="Amsterdam">
+    <meta name="description" content="full stack developer">
+    <meta name="description" content="Full Stack Developer">
+    <meta name="description" content="full-stack-developer">
     <title>Welkom bij uw web-design website!</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -109,14 +113,13 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                         <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/education.png" alt="Icoontje met een hoedje voor opleiding" />
                         </div>
                         <h2>Opleiding!</h2>
-                        <p>Ik studeer op dit moment op het Media-College Amsterdam, heb nog 3 jaar tot ik ben
-                            afgestudeerd.
+                        <p>Ik studeer op dit moment op het Media-College Amsterdam, de opleiding duurt nog 3 jaar voordat ik hem heb afgerond.
                             Het vak wat ik studeer is Software Development.</p>
                     </div>
                     <div class="kopjes">
                         <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/purposeful-man.png" alt="Icoontje van een leerling die zijn doel heeft behaald." /></div>
                         <h2>Doel!</h2>
-                        <p>Mijn doel is om zo goed mogelijk te studeren om genoeg kennis te kunnen opbouwen. Ik hoop dat ik bij het bedrijf waar ik ga werken goed ga presteren.</p>
+                        <p>Mijn doel is om zo goed mogelijk te studeren om genoeg kennis te kunnen opbouwen. Ik hoop dat ik bij een bedrijf waar ik ga werken goed ga presteren.</p>
                     </div>
                     <div class="kopjes">
                         <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/discount.png" alt="Icoonje met een procent teken." />
@@ -129,9 +132,9 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                     <div class="kopjes">
                         <div class="icon"><img src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/100/000000/external-studying-education-smashingstocks-circular-smashing-stocks-2.png" alt="Icoontje met boeken en een wekker erop" /></div>
                         <h2>Vrije Tijd!</h2>
-                        <p>In mijn vrije tijd ben ik bezig met meer kennis op te bouwen en mijn mind te vergroten. Ik
+                        <p>In mijn vrije tijd ben ik bezig met meer kennis op te bouwen en mijn bekwaamheid uit te breiden. Ik
                             ben
-                            bezig om kennis op te bouwen voor op alles te laten weten.</p>
+                            bezig om kennis op te bouwen voor om mijn lering eruit te trekken.</p>
                     </div>
                 </div>
             </div>
@@ -175,15 +178,15 @@ $result = $connection->query('SELECT * FROM `opdrachten`');
                 </div>
                 <div class="filters">
                     <div>
-                        <input checked id="checkbox-website" type="checkbox" class="filter" />
+                        <input id="checkbox-website" type="checkbox" class="filter" />
                         <label for="checkbox-website" class="label">Website</label>
                     </div>
                     <div>
-                        <input checked id="checkbox-app" type="checkbox" class="filter" />
+                        <input id="checkbox-app" type="checkbox" class="filter" />
                         <label for="checkbox-app" class="label">App</label>
                     </div>
                     <div>
-                        <input checked id="checkbox-design" type="checkbox" class="filter" />
+                        <input id="checkbox-design" type="checkbox" class="filter" />
                         <label for="checkbox-design" class="label">Design</label>
                     </div>
                 </div>
